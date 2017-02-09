@@ -51,7 +51,7 @@ class DefaultController extends Controller
              $pdfObj = $this->instancePDF($templateResult);
              $pdfObj->AddPage();
              $outputFormat = 'pdf';
-             $resultForPDF = $this->get('oro_email.email_renderer')
+             $resultForPDF = $this->get('ibnab_pmanager.pdftemplate_renderer')
             ->renderWithDefaultFilters($templateResult->getContent(),$templateParams);
              $resultForPDF = $templateResult->getCss().$resultForPDF;
               $responseData['resultForPDF'] = $resultForPDF;
